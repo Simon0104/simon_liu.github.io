@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon LIU Resume Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Home Section -->
+<header class="header gradient-border">
+    <h1 class="gradient-text scale-up">Simon LIU</h1>
+    <p class="typing">Fullstack Engineer</p>
+    <p>Sydney, New South Wales</p>
+    <p>Email: simon.liu90104@gmail.com | Phone: 0466922722</p>
+</header>
+
+<!-- About Me Section -->
+<section id="about" class="observer-section fade-in gradient-bg">
+    <h2 class="gradient-text">About Me</h2>
+    <p>Adept in project management and engineering, skilled in project tracking and leadership, consistently delivering projects successfully and exceeding expectations.</p>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="observer-section fade-in">
+    <h2 class="gradient-text">Experience</h2>
+
+    <!-- Hynovation Experience -->
+    <div class="job shadow-hover">
+        <h3>Project Management Engineer - Hynovation</h3>
+        <p>Shenzhen | February 2023 - May 2023</p>
+        <ul>
+            <li>Coordinated hydrogen energy project execution, managing project progress and personnel.</li>
+            <li>Prepared project documentation, organized weekly meetings, and ensured effective team communication and problem-solving.</li>
+        </ul>
+    </div>
+
+    <!-- Dorabot Experience with Clickable Title -->
+    <div class="job shadow-hover">
+        <button onclick="showDorabotImages()" class="project-button">Mechanical Engineer - Dorabot</button>
+        <div id="dorabot-images" class="image-gallery"></div>
+        <p>Shenzhen | September 2020 - November 2022</p>
+
+        <!-- Lotte Project with Clickable Button -->
+        <button onclick="showLotteImages()" class="project-button">Project: Lotte Project (South Korea)</button>
+        <div id="lotte-images" class="image-gallery"></div>
+        <ul>
+            <li>Designed shelves and mechanical suction systems, managed on-site installation and testing.</li>
+            <li>Supervised over 20 workers and supported software engineers in testing.</li>
+        </ul>
+
+        <!-- FedEx Project -->
+
+        <button onclick="showFedExImages()" class="project-button">Project: FedEx Project</button>
+        <div id="fedex-images" class="image-gallery"></div>
+        <p>
+            <a href="https://www.youtube.com/watch?v=LYb3ejQb5Jw" target="_blank" style="color: inherit; text-decoration: none;">
+                Duration: October 2021 - February 2022 &#9654;
+            </a>
+        </p>
+        <ul>
+            <li>Designed a specialized gripper, for which I successfully obtained a patent, as part of the project's automation objectives.</li>
+            <li>Oversaw the project’s mechanical layout and site installation, communicating regularly with clients to ensure expectations were met.</li>
+            <li>Conducted simulations to optimize material stiffness, reduced maintenance costs, and debugged robotic arm software.</li>
+            <li>Implemented automated testing procedures that contributed to the project's "lights-out" factory goal, earning an A rating in Dorabot yearly performance evaluation.</li>
+        </ul>
+    </div>
+
+    <!-- Bubble Tea Shop Experience -->
+    <div class="job shadow-hover">
+        <button onclick="showteaImages()" class="project-button">Bubble Tea Shop Staff - Kingsford/Waterloo (Part-Time) - Mymodern</button>
+        <div id="tea-images" class="image-gallery"></div>
+        <p>July 2023 - August 2024</p>
+        <ul>
+            <li>Prepared a variety of beverages to customer specifications, ensuring high-quality standards and efficient service.</li>
+            <li>Managed the cash register, processed orders, and maintained accurate cash handling and daily sales records.</li>
+        </ul>
+        <p><strong>Reference:</strong></p>
+        <ul>
+            <li>Name: Rachel</li>
+            <li>Position: Manager</li>
+            <li>Company: Mymodern Bubble Tea Shop</li>
+            <li>Email: <a href="mailto:rachel071500@gmail.com">rachel071500@gmail.com</a></li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="observer-section fade-in">
+    <h2 class="gradient-text">Projects</h2>
+    <div class="project shadow-hover">
+        <h3>Distributed DNS System Simulation</h3>
+        <p>Developed a DNS system simulation using Python and socket programming, demonstrating DNS functionalities like domain name resolution and multiple record handling.</p>
+        <ul>
+            <li>Technical Stack: Python, Socket Programming, Multithreading</li>
+            <li>Data Structure: Custom DNS class with dictionary-based resource record storage</li>
+            <li>Outcome: Acquired expertise in UDP communication, protocol design, and multithreaded request handling.</li>
+        </ul>
+    </div>
+</section>
+
+<!-- Education Section -->
+<section id="education" class="observer-section fade-in">
+    <h2 class="gradient-text">Education</h2>
+    <p>Master of IT, University of New South Wales (Expected graduation: July 2025)</p>
+    <p>Bachelor of Science in Mechanical Engineering, Civil Aviation University of China (Graduated: September 2017)</p>
+</section>
+
+<!-- Contact Section -->
+<footer id="contact" class="observer-section fade-in gradient-bg">
+    <h2 class="gradient-text">Contact Me</h2>
+    <p>Email: simon.liu90104@gmail.com</p>
+<!--    <p>LinkedIn: [Your LinkedIn Profile Link]</p>-->
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
