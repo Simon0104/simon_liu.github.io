@@ -1,4 +1,4 @@
-/* 
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -8,7 +8,7 @@ body {
     background: #f9f9f9;
 }
 
-
+/* Gradient text effect for titles */
 .gradient-text {
     background: linear-gradient(90deg, #ff7e5f, #feb47b);
     -webkit-background-clip: text;
@@ -17,7 +17,7 @@ body {
     transition: color 0.5s ease;
 }
 
-
+/* Gradient background and hover effect for buttons */
 .project-button {
     padding: 10px 20px;
     background: linear-gradient(45deg, #6a11cb, #2575fc);
@@ -34,7 +34,7 @@ body {
     transform: scale(1.05);
 }
 
-
+/* Fade-in effect for image galleries */
 .image-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -55,7 +55,7 @@ body {
     opacity: 1;
 }
 
-
+/* Shadow and hover effect for paragraphs and list items */
 .job, .project {
     background: #ffffff;
     padding: 20px;
@@ -68,7 +68,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
+/* Gradient border styling */
 .gradient-border {
     padding: 15px;
     border: 2px solid transparent;
@@ -76,99 +76,7 @@ body {
     border-radius: 10px;
 }
 
-
-.typing {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #555;
-    transition: color 0.3s ease;
-}
-
-.typing:hover {
-    color: #ff7e5f;
-} */
-
-
-
-/* 全局样式 */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background: #f9f9f9;
-}
-
-/* 标题渐变文字效果 */
-.gradient-text {
-    background: linear-gradient(90deg, #ff7e5f, #feb47b);
-    -webkit-background-clip: text;
-    color: transparent;
-    font-weight: bold;
-    transition: color 0.5s ease;
-}
-
-/* 按钮的渐变背景和悬停效果 */
-.project-button {
-    padding: 10px 20px;
-    background: linear-gradient(45deg, #6a11cb, #2575fc);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.project-button:hover {
-    background: linear-gradient(45deg, #2575fc, #6a11cb);
-    transform: scale(1.05);
-}
-
-/* 图片展示容器的淡入效果 */
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 15px;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.image-gallery img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.image-gallery.show {
-    opacity: 1;
-}
-
-/* 段落和列表项的阴影边框 */
-.job, .project {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-.job:hover, .project:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* 渐变边框 */
-.gradient-border {
-    padding: 15px;
-    border: 2px solid transparent;
-    border-image: linear-gradient(45deg, #f093fb, #f5576c) 1;
-    border-radius: 10px;
-}
-
-/* 文字悬停时颜色渐变 */
+/* Hover color gradient for text */
 .typing {
     font-size: 1.2em;
     font-weight: bold;
@@ -180,7 +88,7 @@ body {
     color: #ff7e5f;
 }
 
-/* 滚动淡入动画 */
+/* Scroll fade-in animation */
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
