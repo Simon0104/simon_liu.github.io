@@ -1,3 +1,95 @@
+/* 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
+}
+
+
+.gradient-text {
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
+
+
+.project-button {
+    padding: 10px 20px;
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.project-button:hover {
+    background: linear-gradient(45deg, #2575fc, #6a11cb);
+    transform: scale(1.05);
+}
+
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.image-gallery img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-gallery.show {
+    opacity: 1;
+}
+
+
+.job, .project {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.job:hover, .project:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.gradient-border {
+    padding: 15px;
+    border: 2px solid transparent;
+    border-image: linear-gradient(45deg, #f093fb, #f5576c) 1;
+    border-radius: 10px;
+}
+
+
+.typing {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.typing:hover {
+    color: #ff7e5f;
+} */
+
+
+
 /* 全局样式 */
 body {
     font-family: Arial, sans-serif;
@@ -86,4 +178,16 @@ body {
 
 .typing:hover {
     color: #ff7e5f;
+}
+
+/* 滚动淡入动画 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
