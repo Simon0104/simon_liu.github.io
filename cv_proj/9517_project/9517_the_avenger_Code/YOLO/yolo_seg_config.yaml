@@ -1,0 +1,6 @@
+# yolo_config.yaml
+train: yolo_train_labels\images  
+val: yolo_valid_labels\images    
+test: yolo_test_labels\images   
+nc: 3  
+names: ['carapace', 'head', 'flipper']  
