@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>刘阳河简历</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+    /* 固定导航栏 */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      color: #ffd700;
+    }
+    /* 页眉 */
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 80px 20px 40px;
+      text-align: center;
+      margin-top: 50px;
+      animation: fadeIn 1s ease-in;
+    }
+    /* 各个版块 */
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .section-title {
+      margin-bottom: 20px;
+      font-size: 28px;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 10px;
+      text-align: center;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .content h3 {
+      margin-top: 20px;
+      color: #333;
+    }
+    .content ul {
+      margin: 10px 0 20px 20px;
+    }
+    .placeholder-image {
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: 20px auto;
+    }
+    /* 按钮样式 */
+    .work-btn {
+      background-color: steelblue;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s, transform 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .work-btn:hover {
+      background-color: dimgray;
+      transform: scale(1.05);
+    }
+    .work-btn::after {
+      content: " ▼";
+      font-size: 12px;
+    }
+    /* 波纹效果 */
+    .ripple {
+      position: absolute;
+      border-radius: 50%;
+      transform: scale(0);
+      animation: ripple-effect 600ms linear;
+      background-color: rgba(255, 255, 255, 0.7);
+    }
+    @keyframes ripple-effect {
+      to {
+        transform: scale(4);
+        opacity: 0;
+      }
+    }
+    /* 模态框样式 */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0,0,0,0.8);
+      opacity: 1;
+      transition: opacity 0.5s;
+    }
+    .modal.fade-out {
+      opacity: 0;
+    }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+      animation: modalFadeIn 0.5s;
+    }
+    .close {
+      color: #aaa;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    @keyframes modalFadeIn {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    /* 回到顶部按钮 */
+    #back-to-top {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #007BFF;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      border-radius: 50%;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      z-index: 1500;
+      transition: opacity 0.3s;
+    }
+    #back-to-top:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+<!-- 固定导航 -->
+<nav>
+  <a href="#basic">基本信息</a>
+  <a href="#education">教育背景</a>
+  <a href="#work">工作经历</a>
+  <a href="#projects">项目经验</a>
+  <a href="#skills">技能与成就</a>
+</nav>
+
+<!-- 页眉 -->
+<header id="home">
+  <h1>刘阳河简历</h1>
+<!--  <p>全栈工程师 | 托福103分</p>-->
+</header>
+
+<!-- 基本信息 -->
+<section id="basic">
+  <div class="content">
+    <h2 class="section-title">基本信息</h2>
+    <p><strong>电话：</strong>13425702069</p>
+    <p><strong>邮箱：</strong>yanghe0104@163.com</p>
+    <img src="img/WechatIMG87.jpg" alt="刘阳河头像" class="placeholder-image">
+  </div>
+</section>
+
+<!-- 教育背景 -->
+<section id="education">
+  <div class="content">
+    <h2 class="section-title">教育背景</h2>
+    <h3>中国民航大学</h3>
+    <p><strong>时间：</strong>2017-09 ~ 2021-06</p>
+    <p><strong>专业：</strong>飞行器动力工程（本科）</p>
+    <p><strong>成绩：</strong>GPA 3.19/4 (均分81)，班级排名前30%，多次获得奖学金</p>
+    <h3>新南威尔士大学</h3>
+    <p><strong>时间：</strong>2023-09 ~ 至今</p>
+    <p><strong>专业：</strong>IT（硕士）</p>
+    <p><strong>成绩：</strong>WAM 75/100</p>
+    <h3>所学课程</h3>
+    <ul>
+      <li>计算机编程与数据处理</li>
+      <li>人工智能与深度学习</li>
+      <li>计算机网络与系统开发</li>
+      <li>项目管理与协同开发</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 工作经历 -->
+<section id="work">
+  <div class="content">
+    <h2 class="section-title">工作经历</h2>
+    <!-- 将指定项作为按钮 -->
+    <div class="work-buttons" style="text-align: center;">
+      <button class="work-btn" data-title="深圳蓝胖子智能有限公司">深圳蓝胖子智能有限公司</button>
+      <button class="work-btn" data-title="联邦快递自动化项目">联邦快递自动化项目</button>
+      <button class="work-btn" data-title="乐天项目（韩国）">乐天项目（韩国）</button>
+    </div>
+  </div>
+</section>
+
+<!-- 项目经验 -->
+<section id="projects">
+  <div class="content">
+    <h2 class="section-title">项目经验</h2>
+    <h3>电影数据初步清洗与分析项目</h3>
+    <ul>
+      <li>使用pandas读取及预处理电影数据</li>
+      <li>解析JSON格式的演员列表并归一化人气数据</li>
+      <li>利用matplotlib/seaborn进行数据可视化</li>
+      <li>输出清洗后的数据报告</li>
+    </ul>
+    <h3>商业级电商全栈系统开发</h3>
+    <ul>
+      <li>构建前端小程序、电商CMS后台及Java SpringBoot后端API</li>
+      <li>实现商品管理、SKU算法、购物车、订单管理及优惠券核销等功能</li>
+      <li>采用前后端分离架构，并利用Redis缓存和消息队列优化性能</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 技能与成就 -->
+<section id="skills">
+  <div class="content">
+    <h2 class="section-title">技能与成就</h2>
+    <ul>
+      <li>项目管理：全流程管理经验，确保高质量按期交付</li>
+      <li>机械结构设计：熟练使用SolidWorks、CAD、Ansys进行设计与优化</li>
+      <li>编程与数据分析：精通Java和Python，具备数据处理及分析能力</li>
+      <li>国际化沟通：托福103分，具备跨国团队协作能力</li>
+    </ul>
+    <img src="img/iShot_2025-02-28_21.44.42.png" alt="成就图片" class="placeholder-image">
+  </div>
+</section>
+
+<!-- 模态框（用于显示图片或视频） -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div id="modal-body">
+      <!-- 动态加载的内容 -->
+    </div>
+  </div>
+</div>
+
+<!-- 回到顶部按钮 -->
+<button id="back-to-top">↑</button>
+
+<script>
+  // 使用 Intersection Observer 实现各 section 的淡入效果
+  const sections = document.querySelectorAll('section');
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  sections.forEach(section => {
+    observer.observe(section);
+  });
+
+  // 导航栏高亮，根据当前滚动位置设置 active 类
+  const navLinks = document.querySelectorAll('nav a');
+  window.addEventListener('scroll', () => {
+    let current = "";
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      if (window.pageYOffset >= sectionTop - 60) {
+        current = section.getAttribute("id");
+      }
+    });
+    navLinks.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  // 模态框功能实现
+  const modal = document.getElementById('modal');
+  const modalBody = document.getElementById('modal-body');
+  const closeBtn = document.querySelector('.close');
+
+  // 工作经历按钮点击（包含波纹效果）
+  document.querySelectorAll('.work-btn').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+      // 波纹效果
+      let ripple = document.createElement('span');
+      ripple.classList.add('ripple');
+      this.appendChild(ripple);
+      let rect = this.getBoundingClientRect();
+      ripple.style.left = (e.clientX - rect.left) + 'px';
+      ripple.style.top = (e.clientY - rect.top) + 'px';
+      setTimeout(() => { ripple.remove(); }, 600);
+
+      // 根据 data-title 显示对应内容（图片或视频）
+      const title = btn.getAttribute('data-title');
+      if (title === '深圳蓝胖子智能有限公司') {
+        modalBody.innerHTML = `<h3>${title}</h3>
+            <img src="img/WechatIMG88.jpg" alt="${title}" style="width:100%;">`;
+      } else if (title === '联邦快递自动化项目') {
+        modalBody.innerHTML = `<h3>${title}</h3>
+            <iframe src="https://www.youtube.com/embed/LYb3ejQb5Jw?autoplay=1&mute=1" style="width:100%; height:315px;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+      } else if (title === '乐天项目（韩国）') {
+        modalBody.innerHTML = `<h3>${title}</h3>
+            <img src="img/WechatIMG89.jpg" alt="${title}" style="width:100%;">`;
+      }
+      modal.style.display = 'block';
+    });
+  });
+
+  // 关闭模态框（添加淡出效果）
+  function closeModal() {
+    modal.classList.add('fade-out');
+    setTimeout(() => {
+      modal.style.display = 'none';
+      modal.classList.remove('fade-out');
+    }, 500);
+  }
+  closeBtn.addEventListener('click', closeModal);
+  window.addEventListener('click', (event) => {
+    if (event.target == modal) {
+      closeModal();
+    }
+  });
+
+  // 回到顶部按钮
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if(window.pageYOffset > 300){
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+</body>
+</html>
